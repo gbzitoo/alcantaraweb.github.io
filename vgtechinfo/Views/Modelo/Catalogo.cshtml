@@ -1,0 +1,408 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Modelo Padrão de Catalogo - Alcântara Web</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+        .dropdownT:hover .dropdown-menu {
+            display: block;
+            position: absolute;
+            transform: translate3d(5px, 28px, 0px); /* distancia entre menu e btn */
+            top: 0px;
+            left: 0px;
+            will-change: transform;
+        }
+
+        .dropdownT {
+            display: inline-block; /* deixa o LO do "tamanho do próprio texto" e não da largura inteira da tela*/
+            list-style: none; /* rita a "bolinha" do LI*/
+        }
+    </style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/wwwroot/css/album.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="box-shadow navbar navbar-expand-lg navbar-light bg-light fixed-top py-2" style="background-color:lightblue;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       <h4>Sua Loja</h4>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+
+                <div class="dropdown ">
+                    <button class="btn btn-light" style="color:black;" type="button" style="color: #fff;">
+                        <strong>Home</strong>
+                    </button>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" style="color:black;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">
+                        <strong>Galeria</strong>
+                    </button>
+                    <div class="dropdown-menu  align-items-center m-3" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">Todas</a>
+                            </li>
+                            <hr />
+                            <li class="nav-item">
+                                <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">Camisa de Time</a>
+                            </li>
+                            <hr />
+                        </ul>
+
+                        <div class="btn-group dropright dropdownT">
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="#">Tamanho</a>
+                                </li>
+                            </ul>
+                            @*<div class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">P</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">M</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">G</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">GG</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">XG</a>
+                                </li>
+                                <hr>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark decor mx-md-1" style="font-size: 18px; " href="Regionais/BA/BA.html">XGG</a>
+                                </li>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown ">
+                    <button class="btn btn-light" style="color:black;" type="button" style="color: #fff;">
+                        <strong>Sobre</strong>
+                    </button>
+                </div>
+                <div class="dropdown ">
+                    <button class="btn btn-light" style="color:black;" type="button" style="color: #fff;">
+                        <strong>Comprar</strong>
+                    </button>
+                </div>
+                <div class="dropdown ">
+                    <button class="btn btn-light" style="color:black;" type="button" style="color: #fff;">
+                        <strong>Dúvidas</strong>
+                    </button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+    <main role="main">
+
+        <section class="container-fluid">
+            <div class="row bg-dark text-white">
+                <div class="col-lg-7 p-0">
+                    <div id="carouselAnuncios" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselAnuncios" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselAnuncios" data-slide-to="1"></li>
+                            <li data-target="#carouselAnuncios" data-slide-to="2"></li>
+                            <li data-target="#carouselAnuncios" data-slide-to="3"></li>
+                            <li data-target="#carouselAnuncios" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="https://i.imgur.com/2kAf9PR.jpg" alt="Sua Loja">
+                                <div class="carousel-caption">
+                                    <h3 class="display-4 ">Sua Loja</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="https://i.imgur.com/2kAf9PR.jpg" alt="Sua Loja">
+                                <div class="carousel-caption">
+                                    <h3 class=" display-4">Sua Loja</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="https://i.imgur.com/2kAf9PR.jpg" alt="Sua Loja">
+                                <div class="carousel-caption">
+                                    <h3 class="display-4">Sua Loja</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="https://i.imgur.com/2kAf9PR.jpg" alt="Sua Loja">
+                                <div class="carousel-caption">
+                                    <h3 class="display-4">Sua Loja</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="https://i.imgur.com/2kAf9PR.jpg" alt="Sua Loja">
+                                <div class="carousel-caption">
+                                    <h3 class="display-4">Sua Loja</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselAnuncios" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselAnuncios" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 p-4 align-self-center">
+                    <h1 class="display-4 pb-2">As Melhores Camisas de Time!</h1>
+                    <h3 class="display-4 pb-2">Com a Melhor Qualidade!</h3>
+                    <p class="lead">Telefone: 21 9 9999-9999</p>
+                    <p class="lead">E-mail: contato@sualoja.com</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <center><p class="display-3">Destaque</p></center>
+                <center><hr></center>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="../assets/img/portfolio/portifolio/camisa.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                    </div>
+                                    <small class="text-muted">Sua Loja</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-secondary pt-4 pb-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 " style="color:black;">
+                    <h3 style="color:#ffffff;">MAIS <b>COMPRADAS</b></h3>
+                    <nav>
+
+                        <a href="/lotofacil" style="color:aliceblue;" class="text-monospace">Camisa Polo</a> <br>
+                        <a href="/quina" style="color:aliceblue;" class="text-monospace">Camisa do Fluminense</a> <br>
+                        <a href="/timemania" style="color:aliceblue;" class="text-monospace">Camisa do Fluminense</a> <br>
+                        <a href="/lotomania" style="color:aliceblue;" class="text-monospace">Camisa do Fluminense</a> <br>
+                        <a href="/diadesorte" style="color:aliceblue;" class="text-monospace">Camisa do Fluminense</a> <br>
+                        <a href="/federal" style="color:aliceblue;" class="text-monospace">Camisa do Fluminense</a> <br>
+                    </nav>
+                    <hr />
+                </div>
+                <div class="col-md-4">
+                    <h3 style="color:#ffffff;">COMO <b>COMPRAR</b></h3>
+                    <nav>
+                        <a href="/resultados/lotofacil" style="color:aliceblue;" class="text-monospace">PICPAY</a>
+                        <br>
+                        <a href="/resultados/quina" style="color:aliceblue;" class="text-monospace">BOLETO</a>
+                        <br>
+                        <a href="/resultados/timemania" style="color:aliceblue;" class="text-monospace">DEPOSITO</a>
+                        <br>
+                        <a href="/resultados/lotomania" style="color:aliceblue;" class="text-monospace">CARTÃO</a>
+                        <br>
+                    </nav>
+                    <hr />
+                </div>
+                <div class="col-md-2">
+                    <h3 style="color:#ffffff;"><b>ÚTEIS</b></h3>
+                    <nav>
+                        <a href="/sobre" style="color:aliceblue;" class="text-monospace">Sobre</a>
+                        <br>
+                        <a href="/faq" style="color:aliceblue;" class="text-monospace">Perguntas Frequentes</a>
+                        <br>
+                        <a href="/atendimento" style="color:aliceblue;" class="text-monospace">Entre em Contato</a>
+                        <br>
+
+                    </nav>
+                    <hr />
+                </div>
+                <div class="col-md-3 logo">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center><h3>Sua Loja</h3></center>
+                            <p style="color:aliceblue;" class="text-monospace f-mensagem"><i>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
